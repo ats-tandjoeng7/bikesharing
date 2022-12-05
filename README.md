@@ -53,7 +53,7 @@ main branch
 We first reformatted the original csv data by using Python Pandas and then used Tableau to perform in-depth analysis and visualizations. Although I retained all the initial field data when saving the modified DataFrame to a csv file, there were several unique approaches that I used when accomplishing the required visualizations as discussed and highlighted below. Some of the improvement ideas for future analysis were also analyzed and embodied in the Tableau visualization dashboard (<a href="https://public.tableau.com/app/profile/s.tandjoeng/viz/bikesharing_visualizations_16701338840620/NYCCitiBikeStory?publish=yes" target="_blank" title="Link to NYC Citi Bike Story">Bike Sharing Visualizations</a>).
 
 ### Deliverable 1
-We used Python Pandas's `to_datetime()` function to convert the datatype of trip duration data in the original table from **int64** to **datetime64[ns]**, which is a datetime format with nanosecond **[ns]** precision. I double checked the resulting time format by using `datetime.strftime('%H:%M:%S')`. The source code can be referred in [NYC_Citibike_Challenge.ipynb](./NYC_Citibike_Challenge.ipynb) and the first five rows of our modified dataframe table are shown in Fig. 1. Please be kindly informed that the modified csv file, *201908-citibike-tripdata_new.csv.zip*, was too massive to be uploaded to GitHub.
+We used Python Pandas's `to_datetime()` function to convert the datatype of trip duration data in the original table from **int64** to **datetime64[ns]**, which is a datetime format with nanosecond **[ns]** precision. I double checked the resulting time format by using `datetime.strftime('%H:%M:%S')`. The source code can be referred in [NYC_Citibike_Challenge.ipynb](./NYC_Citibike_Challenge.ipynb) and the first five rows of our modified dataframe table are shown in Fig. 1. Please be kindly informed that the modified csv file, *201908-citibike-tripdata_new.csv.zip*, was too massive to be uploaded to a GitHub repo.
 
 ```
 import pandas as pd
@@ -103,12 +103,12 @@ The heatmap visualizations representing the number of bike trips for each type o
 **Fig. 6 User Trips by Gender by Weekday**
 
 ## Summary
-All deliverables have been crafted and analyzed according to the assignment requirements, including code refactoring, quality assurance for ensuring accurate results, more descriptive field labels, better usability, and optimized dashboard performance. I hope users and stakeholders will be able to benefit from our visualizations online <a href="https://public.tableau.com/app/profile/s.tandjoeng/viz/bikesharing_visualizations_16701338840620/NYCCitiBikeStory?publish=yes" target="_blank" title="Link to NYC Citi Bike Story">Bike Sharing Visualizations</a> and explore our analysis results before drawing the final conclusions.
+All deliverables have been crafted and analyzed according to the assignment requirements, including code refactoring, quality assurance for ensuring accurate results, more descriptive field labels, better usability, and optimized dashboard performance. I hope users and stakeholders will be able to benefit from our visualizations online <a href="https://public.tableau.com/app/profile/s.tandjoeng/viz/bikesharing_visualizations_16701338840620/NYCCitiBikeStory?publish=yes" target="_blank" title="Link to NYC Citi Bike Story">Bike Sharing Visualizations</a> and easily explore our analysis summary and story before drawing the final conclusions.
 
 To better understand the demographic of users and which gender or generation groups the bike sharing businesses should target to boost the bike utilization, I further created custom groups based on Birth Year of our users and conducted visualizations with fixed ranges of *Number of Trips* to better crunch the dataset as demonstrated in Fig. 7. The chart and filter we embedded in Fig. 7 was part of my suggestions for future analysis. It significantly helped us understand the demographic of bike sharing users and users' gender gaps at once.
 - More than 80% of users were annual subscribers.
 - Users were approximately 65% male, 25% female, and 10% other genders. Male users were the top users of bike sharing service, including the length of bike utilization, across all generations except for Gen X.
-- Gen Y (Millenials) were the most frequent users overall regardless of gender, though *UNKNOWN* gender users were top in the random customer usertype.
+- Gen Y (Millennials) were the most frequent users overall regardless of gender, though *UNKNOWN* gender users were top in the random customer usertype.
 - *UNKNOWN* gender category was mainly from those users belonged to Gen X because they might have opted for not reporting, though we do not know why Gen X was not providing their gender information in most cases.
 
 ![Fig. 7](./Data/GenerationAndGenderBreakdownPerUsertype.png 'Fig. 7 Generation and Gender Breakdown per Usertype')\
@@ -117,10 +117,10 @@ To better understand the demographic of users and which gender or generation gro
 ![Fig. 8](./Data/BikeUtilizationByGenerationByGender.png 'Fig. 8 Bike Utilization by Generation by Gender')\
 **Fig. 8 Bike Utilization by Generation by Gender**
 
-![Fig. 9](./Data/BikeidToRepair.png 'Fig. 9 Bikeid to Repair')\
-**Fig. 9 Bikeid to Repair**
+![Fig. 9](./Data/BikeidToRepair.png 'Fig. 9 Bikeid due for Repairs')\
+**Fig. 9 Bikeid due for Repairs**
 
-Fig. 8 together with Fig. 7 illustrated great tools that should allow us to draw more solid decisions in terms of demographic trends. Fig. 9 helped us pinpoint which bikeid should be repaired immediately or was beyond repair because the utilization length has exceeded certain safety limits. Users could just hover over the chart to quickly spot certain Bikeid to repair.
+Fig. 8 together with Fig. 7 illustrated great tools that should allow us to draw more solid decisions in terms of demographic trends. Fig. 9 helped us pinpoint which Bikeids should be repaired immediately or was beyond repair because its utilization length has exceeded certain safety criteria. Users could just hover over the chart to quickly spot a specific Bikeid or a group of Bikeids that were due for repairs.
 
 Based on our data analytics and visualizations, to boost revenues we will need to study why non-male users were less likely to use bike sharing service and how to expand accessibility of our bike sharing service to female and other gender groups, for example by providing easily adjustable size/power, assorted color selection, trackable safety apps, or even specialized bike sharing service for female and other gender groups. Providing a few bike options, including a cheaper rental option, might also be the key to be inclusive and better attract Gen Z to become frequent users. As for software app improvement, integrating better Search Engine Optimization (SEO) into the bike sharing service apps, such that different gender and community groups could easily find and access bikes that they will likely use more regularly.
 
